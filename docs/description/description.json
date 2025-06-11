@@ -1,0 +1,423 @@
+[
+  {
+    "patternId": "Attribute",
+    "title": "This detector raises a warning for every public attr_writer, attr_accessor, and attr with the writable flag set to true.",
+    "description": "This detector raises a warning for every public attr_writer, attr_accessor, and attr with the writable flag set to true. Reek does not raise warnings for readonly attributes.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "BooleanParameter",
+    "title": "Boolean Parameter is a case of Control Couple, where a method parameter is defaulted to true or false.",
+    "description": "Boolean Parameter is a case of Control Couple, where a method parameter is defaulted to true or false.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "ClassVariable",
+    "title": "Class variables form part of the global runtime state, and as such make it easy for one part of the system to accidentally or inadvertently depend on another part of the system.",
+    "description": "Class variables form part of the global runtime state, and as such make it easy for one part of the system to accidentally or inadvertently depend on another part of the system.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "ControlParameter",
+    "title": "Reek warns about Control Parameter when a method parameter or block parameter is the tested value in a conditional statement.",
+    "description": "Reek warns about Control Parameter when a method parameter or block parameter is the tested value in a conditional statement.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "DataClump",
+    "title": "Reek looks for a group of two or more parameters with the same names that are expected by three or more methods of a class.",
+    "description": "Reek looks for a group of two or more parameters with the same names that are expected by three or more methods of a class.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_copies",
+        "description": "The maximum number of methods that are permitted to take the same group of parameters. Defaults to 2."
+      },
+      {
+        "name": "min_clump_size",
+        "description": "The smallest number of parameters that can be reported as a clump. Defaults to 2."
+      }
+    ]
+  },
+  {
+    "patternId": "DuplicateMethodCall",
+    "title": "Reek's Duplicate Method Call detector checks for repeated identical method calls within any one method definition.",
+    "description": "Reek's Duplicate Method Call detector checks for repeated identical method calls within any one method definition.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_calls",
+        "description": "The maximum number of duplicate calls allowed within a method. Defaults to 1."
+      },
+      {
+        "name": "allow_calls",
+        "description": "Ignores any context who matches it."
+      }
+    ]
+  },
+  {
+    "patternId": "FeatureEnvy",
+    "title": "Feature Envy reports any method that refers to self less often than it refers to (ie. send messages to) some other object.",
+    "description": "Feature Envy reports any method that refers to self less often than it refers to (ie. send messages to) some other object.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "InstanceVariableAssumption",
+    "title": "An instance variable must be set in the constructor or be accessed through a method with lazy initialization / memoization. If not, Instance Variable Assumption will be reported.",
+    "description": "An instance variable must be set in the constructor or be accessed through a method with lazy initialization / memoization. If not, Instance Variable Assumption will be reported.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "IrresponsibleModule",
+    "title": "Irresponsible Module checks classes and modules, including those created through Struct.new and Class.new and directly assigned to a constant.",
+    "description": "Irresponsible Module checks classes and modules, including those created through Struct.new and Class.new and directly assigned to a constant.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "LongParameterList",
+    "title": "Long Parameter List reports any method or block with more than 3 parameters.",
+    "description": "Long Parameter List reports any method or block with more than 3 parameters.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_params",
+        "description": "The maximum number of parameters allowed in a method or block before a warning is issued. Defaults to 3."
+      }
+    ]
+  },
+  {
+    "patternId": "LongYieldList",
+    "title": "Currently Long Yield List reports any method or block with more than 3 parameters.",
+    "description": "Currently Long Yield List reports any method or block with more than 3 parameters.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_params",
+        "description": "The maximum number of parameters allowed in a method or block before a warning is issued. Defaults to 3."
+      }
+    ]
+  },
+  {
+    "patternId": "ManualDispatch",
+    "title": "Reek reports a Manual Dispatch smell if it finds source code that manually checks whether an object responds to a method before that method is called.",
+    "description": "Reek reports a Manual Dispatch smell if it finds source code that manually checks whether an object responds to a method before that method is called.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "MissingSafeMethod",
+    "title": "Candidate methods for the Missing Safe Method smell are methods whose names end with an exclamation mark.",
+    "description": "Candidate methods for the Missing Safe Method smell are methods whose names end with an exclamation mark.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "ModuleInitialize",
+    "title": "Reek warns about module initialize when an instance method named initialize is present in a module.",
+    "description": "Reek warns about module initialize when an instance method named initialize is present in a module.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "NestedIterators",
+    "title": "Nested Iterators reports failing methods only once. Object#tap is ignored by default and thus does not count as iterator.",
+    "description": "Nested Iterators reports failing methods only once. Object#tap is ignored by default and thus does not count as iterator.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_allowed_nesting",
+        "description": "The maximum depth of nested iterators. Defaults to 1"
+      },
+      {
+        "name": "ignore_iterators",
+        "description": "List of iterators to be excluded from the smell check. Includes only tap at the moment"
+      }
+    ]
+  },
+  {
+    "patternId": "NilCheck",
+    "title": "A Nil Check is a type check. Failures of Nil Check violate the \"tell, don't ask\" principle.",
+    "description": "A Nil Check is a type check. Failures of Nil Check violate the \"tell, don't ask\" principle.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "RepeatedConditional",
+    "title": "Repeated Conditional is a case of Simulated Polymorphism. Basically it means you are checking the same value throughout a single class and take decisions based on this.",
+    "description": "Repeated Conditional is a case of Simulated Polymorphism. Basically it means you are checking the same value throughout a single class and take decisions based on this.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_ifs",
+        "description": "The maximum number of identical conditional tests permitted before Reek raises a warning. Defaults to 2."
+      }
+    ]
+  },
+  {
+    "patternId": "SubclassedFromCoreClass",
+    "title": "Candidate classes for the Subclassed From Core Class smell are classes which inherit from Core Classes like Hash, String and Array.",
+    "description": "Candidate classes for the Subclassed From Core Class smell are classes which inherit from Core Classes like Hash, String and Array.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "TooManyConstants",
+    "title": "Too Many Constants is a case of Large Class.",
+    "description": "Too Many Constants is a case of Large Class.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_constants",
+        "description": "The maximum number of constants that are permitted. Defaults to 5"
+      }
+    ]
+  },
+  {
+    "patternId": "TooManyInstanceVariables",
+    "title": "Reek only counts the instance variables you use explicitly like in the example above. Class macros like attr_accessor are disregarded.",
+    "description": "Reek only counts the instance variables you use explicitly like in the example above. Class macros like attr_accessor are disregarded.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_instance_variables",
+        "description": "The maximum number of instance variables that are permitted. Defaults to 4"
+      }
+    ]
+  },
+  {
+    "patternId": "TooManyMethods",
+    "title": "Too Many Methods is a case of Large Class.",
+    "description": "Too Many Methods is a case of Large Class.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_methods",
+        "description": "The maximum number of methods that are permitted. Defaults to 15"
+      }
+    ]
+  },
+  {
+    "patternId": "TooManyStatements",
+    "title": "A method with Too Many Statements is any method that has a large number of lines",
+    "description": "A method with Too Many Statements is any method that has a large number of lines",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "max_statements",
+        "description": "The maximum number of statements allowed in a method before a warning is issued. Defaults to 5."
+      }
+    ]
+  },
+  {
+    "patternId": "UncommunicativeMethodName",
+    "title": "An Uncommunicative Method Name is a method name that doesn't communicate its intent well enough. This code smell is a case of Uncommunicative Name.",
+    "description": "An Uncommunicative Method Name is a method name that doesn't communicate its intent well enough. This code smell is a case of Uncommunicative Name.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "accept",
+        "description": "The set of names that Reek will accept (and not report) even if they match one of the reject expressions."
+      }
+    ]
+  },
+  {
+    "patternId": "UncommunicativeModuleName",
+    "title": "An Uncommunicative Module Name is a module name that doesn't communicate its intent well enough. This code smell is a case of Uncommunicative Name.",
+    "description": "An Uncommunicative Module Name is a module name that doesn't communicate its intent well enough. This code smell is a case of Uncommunicative Name.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "accept",
+        "description": "The set of names that Reek will accept (and not report) even if they match one of the reject expressions. Empty by default."
+      }
+    ]
+  },
+  {
+    "patternId": "UncommunicativeParameterName",
+    "title": "An Uncommunicative Parameter Name is a parameter name that doesn't communicate its intent well enough. This code smell is a case of Uncommunicative Name.",
+    "description": "An Uncommunicative Parameter Name is a parameter name that doesn't communicate its intent well enough. This code smell is a case of Uncommunicative Name.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "accept",
+        "description": "The set of names that Reek will accept (and not report) even if they match one of the reject expressions."
+      }
+    ]
+  },
+  {
+    "patternId": "UncommunicativeVariableName",
+    "title": "An Uncommunicative Variable Name is a variable name that doesn't communicate its intent well enough. This code smell is a case of Uncommunicative Name.",
+    "description": "An Uncommunicative Variable Name is a variable name that doesn't communicate its intent well enough. This code smell is a case of Uncommunicative Name.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "accept",
+        "description": "Names that will be accepted (not reported) even if they match one of the reject expressions. Defaults to _."
+      }
+    ]
+  },
+  {
+    "patternId": "UnusedParameters",
+    "title": "Unused Parameter refers to methods with parameters that are unused in scope of the method.",
+    "description": "Unused Parameter refers to methods with parameters that are unused in scope of the method.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "UnusedPrivateMethod",
+    "title": "Classes should use their private methods. Otherwise this is dead code which is confusing and bad for maintenance.",
+    "description": "Classes should use their private methods. Otherwise this is dead code which is confusing and bad for maintenance.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      }
+    ]
+  },
+  {
+    "patternId": "UtilityFunction",
+    "title": "A Utility Function is any instance method that has no dependency on the state of the instance.",
+    "description": "A Utility Function is any instance method that has no dependency on the state of the instance.",
+    "timeToFix": 5,
+    "parameters": [
+      {
+        "name": "exclude",
+        "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "public_methods_only",
+        "description": "Disable this smell detector for non-public methods (which means 'private' and 'protected')"
+      }
+    ]
+  }
+
+]

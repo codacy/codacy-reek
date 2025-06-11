@@ -1,0 +1,5 @@
+# .reek.yml
+---
+detectors:
+  UncommunicativeVariableName:
+    enabled: false
