@@ -1,0 +1,397 @@
+{
+  "name": "reek",
+  "version": "6.5.0",
+  "patterns": [
+    {
+      "patternId": "Attribute",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "BooleanParameter",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "ClassVariable",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "ControlParameter",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "DataClump",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_copies",
+          "default": 2
+        },
+        {
+          "name": "min_clump_size",
+          "default": 2
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "DuplicateMethodCall",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_calls",
+          "default": 1
+        },
+        {
+          "name": "allow_calls",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "FeatureEnvy",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "InstanceVariableAssumption",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "IrresponsibleModule",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "LongParameterList",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_params",
+          "default": 3
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "LongYieldList",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_params",
+          "default": 3
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "ManualDispatch",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "MissingSafeMethod",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "ModuleInitialize",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "NestedIterators",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_allowed_nesting",
+          "default": 1
+        },
+        {
+          "name": "ignore_iterators",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "NilCheck",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "RepeatedConditional",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_ifs",
+          "default": 2
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "SubclassedFromCoreClass",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "TooManyConstants",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_constants",
+          "default": 5
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "TooManyInstanceVariables",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_instance_variables",
+          "default": 4
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "TooManyMethods",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_methods",
+          "default": 15
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "TooManyStatements",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "max_statements",
+          "default": 5
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "UncommunicativeMethodName",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "accept",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "UncommunicativeModuleName",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "accept",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "UncommunicativeParameterName",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "accept",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "UncommunicativeVariableName",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "accept",
+          "default": ["_"]
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "UnusedParameters",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "UnusedPrivateMethod",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        }],
+      "enabled": true
+    },
+    {
+      "patternId": "UtilityFunction",
+      "level": "Warning",
+      "category": "ErrorProne",
+      "parameters": [
+        {
+          "name": "exclude",
+          "default": []
+        },
+        {
+          "name": "public_methods_only",
+          "default": false
+        }],
+      "enabled": true
+    }
+  ]
+}
