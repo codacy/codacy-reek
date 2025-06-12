@@ -6,12 +6,12 @@ import scala.collection.mutable
 case class ReekLocation(line: Int, column: JsValue = JsNull, length: JsValue = JsNull)
 
 case class ReekOffense(
-                        severity: JsValue = JsString("Warning"),
-                        message: JsString,
-                        cop_name: JsString,
-                        corrected: JsValue = JsBoolean(false),
-                        location: ReekLocation
-                      )
+    severity: JsValue = JsString("Warning"),
+    message: JsString,
+    cop_name: JsString,
+    corrected: JsValue = JsBoolean(false),
+    location: ReekLocation
+)
 
 case class ReekFiles(path: JsString, offenses: Option[List[ReekOffense]])
 
@@ -29,7 +29,6 @@ object ReekResult {
       val grouped = mutable.Map.empty[String, List[ReekOffense]]
 
       array.value.foreach { js =>
-        val context = (js \ "context").asOpt[String].getOrElse("UnknownContext")
         val path = (js \ "source").asOpt[String].getOrElse("unknown_file.rb")
         val lines = (js \ "lines").asOpt[List[Int]].getOrElse(List(1))
         val message = (js \ "message").as[String]

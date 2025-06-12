@@ -1,2 +1,4 @@
 ---
-# Empty Reek configuration: all defaults apply.
+detectors:
+  UnusedPrivateMethod:
+    enabled: true
