@@ -115,7 +115,7 @@ object Reek extends Tool {
       } else {
         conf match {
           case Some(patterns) =>
-            getConfigFile(patterns)  // use UI config
+            getConfigFile(patterns) // use UI config
           case None =>
             throw new RuntimeException("No Reek configuration found: missing both .reek.yml and Codacy UI patterns.")
         }
