@@ -7,7 +7,7 @@ import com.codacy.plugins.api
 import com.codacy.plugins.api.results.Result.Issue
 import com.codacy.plugins.api.results.Tool.Specification
 import com.codacy.plugins.api.results.{Parameter, Pattern, Result, Tool}
-import com.codacy.plugins.api.{Options, paramValueToJsValue}
+import com.codacy.plugins.api.{paramValueToJsValue, Options}
 import com.codacy.tools.scala.seed.utils.CommandRunner
 import play.api.libs.json._
 
@@ -21,11 +21,11 @@ object Reek extends Tool {
     Set("Gemfile.lock").map(_.toLowerCase())
 
   override def apply(
-                      source: api.Source.Directory,
-                      configuration: Option[List[Pattern.Definition]],
-                      files: Option[Set[api.Source.File]],
-                      options: Map[Options.Key, Options.Value]
-                    )(implicit specification: Tool.Specification): Try[List[Result]] = {
+      source: api.Source.Directory,
+      configuration: Option[List[Pattern.Definition]],
+      files: Option[Set[api.Source.File]],
+      options: Map[Options.Key, Options.Value]
+  )(implicit specification: Tool.Specification): Try[List[Result]] = {
 
     val cmd = getCommandFor(Paths.get(source.path), configuration, files, specification, resultFilePath)
 

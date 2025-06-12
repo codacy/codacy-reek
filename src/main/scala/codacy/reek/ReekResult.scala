@@ -6,12 +6,12 @@ import scala.collection.mutable
 case class ReekLocation(line: Int, column: JsValue = JsNull, length: JsValue = JsNull)
 
 case class ReekOffense(
-                        severity: JsValue = JsString("Warning"),
-                        message: JsString,
-                        cop_name: JsString,
-                        corrected: JsValue = JsBoolean(false),
-                        location: ReekLocation
-                      )
+    severity: JsValue = JsString("Warning"),
+    message: JsString,
+    cop_name: JsString,
+    corrected: JsValue = JsBoolean(false),
+    location: ReekLocation
+)
 
 case class ReekFiles(path: JsString, offenses: Option[List[ReekOffense]])
 
