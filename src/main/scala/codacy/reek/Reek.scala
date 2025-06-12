@@ -15,8 +15,6 @@ import scala.io.Source
 import scala.util.{Failure, Properties, Success, Try}
 
 object Reek extends Tool {
-  private val plugins: List[String] =
-    List()
 
   // Gemfile is analysed
   private val filesToIgnore: Set[String] =

@@ -29,7 +29,6 @@ object ReekResult {
       val grouped = mutable.Map.empty[String, List[ReekOffense]]
 
       array.value.foreach { js =>
-        val context = (js \ "context").asOpt[String].getOrElse("UnknownContext")
         val path = (js \ "source").asOpt[String].getOrElse("unknown_file.rb")
         val lines = (js \ "lines").asOpt[List[Int]].getOrElse(List(1))
         val message = (js \ "message").as[String]
