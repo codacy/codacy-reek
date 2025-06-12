@@ -26,12 +26,11 @@ object Reek extends Tool {
       files: Option[Set[api.Source.File]],
       options: Map[Options.Key, Options.Value]
   )(implicit specification: Tool.Specification): Try[List[Result]] = {
-
     val cmd = getCommandFor(Paths.get(source.path), configuration, files, specification, resultFilePath)
 
     CommandRunner.exec(cmd, Some(new File(source.path))) match {
 
-      case Right(resultFromTool) if resultFromTool.exitCode < 2 =>
+      case Right(resultFromTool) if resultFromTool.exitCode == 0 || resultFromTool.exitCode == 2 =>
         try {
           // Save stdout to result file
           val writer = new PrintWriter(resultFilePath.toFile)
@@ -42,10 +41,12 @@ object Reek extends Tool {
           }
 
           parseResult(resultFilePath.toFile) match {
-            case s @ Success(_) => s
+            case s @ Success(_) =>
+              s
             case Failure(e) =>
               val msg =
                 s"""
+                   |[Reek] Failed to parse result file.
                    |Reek exited with code ${resultFromTool.exitCode}
                    |message: ${e.getMessage}
                    |stdout: ${resultFromTool.stdout.mkString(Properties.lineSeparator)}
@@ -54,13 +55,14 @@ object Reek extends Tool {
               Failure(new Exception(msg))
           }
         } catch {
-          case e: Throwable => Failure(e)
+          case e: Throwable =>
+            Failure(e)
         }
 
       case Right(resultFromTool) =>
         val msg =
           s"""
-             |Reek exited with code ${resultFromTool.exitCode}
+             |[Reek] Command failed with exit code ${resultFromTool.exitCode}
              |stdout: ${resultFromTool.stdout.mkString(Properties.lineSeparator)}
              |stderr: ${resultFromTool.stderr.mkString(Properties.lineSeparator)}
          """.stripMargin
@@ -105,18 +107,26 @@ object Reek extends Tool {
       spec: Specification,
       outputFilePath: Path
   ): List[String] = {
-    val configFile = conf match {
-      // is using UI configuration
-      case Some(patterns) => getConfigFile(patterns)
-      // is not using UI configuration
-      case None =>
-        val customCodacyConfigFile = path.resolve(".reek.yml")
-        Option.when(Files.exists(customCodacyConfigFile))(customCodacyConfigFile)
+    val configFile: Option[Path] = {
+      val customCodacyConfigFile = path.resolve("/src/.reek.yml")
+
+      if (Files.exists(customCodacyConfigFile)) {
+        Some(customCodacyConfigFile)
+      } else {
+        conf match {
+          case Some(patterns) =>
+            getConfigFile(patterns)  // use UI config
+          case None =>
+            throw new RuntimeException("No Reek configuration found: missing both .reek.yml and Codacy UI patterns.")
+        }
+      }
     }
 
     val configFileOptions = configFile match {
-      case Some(file) => List("-c", file.toString)
-      case None => List.empty
+      case Some(file) =>
+        List("-c", file.toString)
+      case None =>
+        List.empty
     }
 
     val patternsCmd = (for {
@@ -124,7 +134,8 @@ object Reek extends Tool {
     } yield patterns.patternId.toString) match {
       case patternIds if patternIds.nonEmpty =>
         patternIds.flatMap(p => List("--smell", p))
-      case _ => List.empty
+      case _ =>
+        List.empty
     }
 
     val filesCmd = files
