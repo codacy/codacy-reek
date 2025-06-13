@@ -5,7 +5,7 @@
     {
       "patternId": "Attribute",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -16,7 +16,7 @@
     {
       "patternId": "BooleanParameter",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -26,7 +26,7 @@
     },
     {
       "patternId": "ClassVariable",
-      "level": "Warning",
+      "level": "Error",
       "category": "ErrorProne",
       "parameters": [
         {
@@ -38,7 +38,7 @@
     {
       "patternId": "ControlParameter",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -49,7 +49,7 @@
     {
       "patternId": "DataClump",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -67,8 +67,8 @@
     },
     {
       "patternId": "DuplicateMethodCall",
-      "level": "Warning",
-      "category": "ErrorProne",
+      "level": "Minor",
+      "category": "Performance",
       "parameters": [
         {
           "name": "exclude",
@@ -82,12 +82,12 @@
           "name": "allow_calls",
           "default": []
         }],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "FeatureEnvy",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -97,7 +97,7 @@
     },
     {
       "patternId": "InstanceVariableAssumption",
-      "level": "Warning",
+      "level": "Error",
       "category": "ErrorProne",
       "parameters": [
         {
@@ -109,7 +109,7 @@
     {
       "patternId": "IrresponsibleModule",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "Documentation",
       "parameters": [
         {
           "name": "exclude",
@@ -120,7 +120,7 @@
     {
       "patternId": "LongParameterList",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -135,7 +135,7 @@
     {
       "patternId": "LongYieldList",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -150,7 +150,7 @@
     {
       "patternId": "ManualDispatch",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "BestPractice",
       "parameters": [
         {
           "name": "exclude",
@@ -161,7 +161,7 @@
     {
       "patternId": "MissingSafeMethod",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "BestPractice",
       "parameters": [
         {
           "name": "exclude",
@@ -171,7 +171,7 @@
     },
     {
       "patternId": "ModuleInitialize",
-      "level": "Warning",
+      "level": "Error",
       "category": "ErrorProne",
       "parameters": [
         {
@@ -239,7 +239,7 @@
     {
       "patternId": "TooManyConstants",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "Complexity",
       "parameters": [
         {
           "name": "exclude",
@@ -254,7 +254,7 @@
     {
       "patternId": "TooManyInstanceVariables",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "Complexity",
       "parameters": [
         {
           "name": "exclude",
@@ -269,7 +269,7 @@
     {
       "patternId": "TooManyMethods",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "Complexity",
       "parameters": [
         {
           "name": "exclude",
@@ -284,7 +284,7 @@
     {
       "patternId": "TooManyStatements",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "Complexity",
       "parameters": [
         {
           "name": "exclude",
@@ -298,8 +298,8 @@
     },
     {
       "patternId": "UncommunicativeMethodName",
-      "level": "Warning",
-      "category": "ErrorProne",
+      "level": "Minor",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -309,12 +309,12 @@
           "name": "accept",
           "default": []
         }],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "UncommunicativeModuleName",
-      "level": "Warning",
-      "category": "ErrorProne",
+      "level": "Minor",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -324,12 +324,12 @@
           "name": "accept",
           "default": []
         }],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "UncommunicativeParameterName",
-      "level": "Warning",
-      "category": "ErrorProne",
+      "level": "Minor",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -339,12 +339,12 @@
           "name": "accept",
           "default": []
         }],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "UncommunicativeVariableName",
-      "level": "Warning",
-      "category": "ErrorProne",
+      "level": "Minor",
+      "category": "CodeStyle",
       "parameters": [
         {
           "name": "exclude",
@@ -354,12 +354,12 @@
           "name": "accept",
           "default": ["_"]
         }],
-      "enabled": true
+      "enabled": false
     },
     {
       "patternId": "UnusedParameters",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "UnusedCode",
       "parameters": [
         {
           "name": "exclude",
@@ -370,7 +370,7 @@
     {
       "patternId": "UnusedPrivateMethod",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "UnusedCode",
       "parameters": [
         {
           "name": "exclude",
@@ -381,7 +381,7 @@
     {
       "patternId": "UtilityFunction",
       "level": "Warning",
-      "category": "ErrorProne",
+      "category": "UnusedCode",
       "parameters": [
         {
           "name": "exclude",
