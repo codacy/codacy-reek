@@ -67,7 +67,7 @@
     },
     {
       "patternId": "DuplicateMethodCall",
-      "level": "Minor",
+      "level": "Info",
       "category": "Performance",
       "parameters": [
         {
@@ -298,7 +298,7 @@
     },
     {
       "patternId": "UncommunicativeMethodName",
-      "level": "Minor",
+      "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -313,7 +313,7 @@
     },
     {
       "patternId": "UncommunicativeModuleName",
-      "level": "Minor",
+      "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -328,7 +328,7 @@
     },
     {
       "patternId": "UncommunicativeParameterName",
-      "level": "Minor",
+      "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
@@ -343,7 +343,7 @@
     },
     {
       "patternId": "UncommunicativeVariableName",
-      "level": "Minor",
+      "level": "Info",
       "category": "CodeStyle",
       "parameters": [
         {
