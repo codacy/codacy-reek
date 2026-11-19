@@ -136,10 +136,6 @@
       {
         "name": "max_params",
         "description": "The maximum number of parameters allowed in a method or block before a warning is issued. Defaults to 3."
-      },
-      {
-        "name": "overrides",
-        "description": "overrides"
       }
     ]
   },

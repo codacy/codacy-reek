@@ -138,14 +138,6 @@
         {
           "name": "max_params",
           "default": 3
-        },
-        {
-          "name": "overrides",
-          "default": {
-            "initialize": {
-              "max_params": 5
-            }
-          }
         }
       ],
       "enabled": true
