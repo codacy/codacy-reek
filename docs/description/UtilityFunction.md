@@ -4,7 +4,7 @@
 
 A _Utility Function_ is any instance method that has no dependency on the state of the instance.
 
-_Utility Function_ is heavily related to _[Feature Envy](FeatureEnvy)_, please check out the explanation there why _Utility Function_ is something you should care about.
+_Utility Function_ is heavily related to _[Feature Envy](https://github.com/troessner/reek/blob/v6.6.0/docs/Feature-Envy.md)_, please check out the explanation there why _Utility Function_ is something you should care about.
 
 ## Example
 
@@ -37,11 +37,11 @@ _Utility Function_ will warn about any method that:
 
 ## Differences to _Feature Envy_
 
-_[Feature Envy](FeatureEnvy)_ is only triggered if there are some references to self and _Utility Function_ is triggered if there are no references to self.
+_[Feature Envy](https://github.com/troessner/reek/blob/v6.6.0/docs/Feature-Envy.md)_ is only triggered if there are some references to self and _Utility Function_ is triggered if there are no references to self.
 
 ## Configuration
 
-Reek's _Utility Function_ detector supports the [Basic Smell Options](Basic-Smell-Options.md), plus:
+Reek's _Utility Function_ detector supports the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 | Option                | Value       | Effect  |
 | ----------------------|-------------|---------|

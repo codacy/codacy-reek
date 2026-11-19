@@ -32,7 +32,7 @@ _Long Parameter List_ reports any method or block with more than 3 parameters.
 ## Configuration
 
 Reek's _Long Parameter List_ detector supports the
-[Basic Smell Options](Basic-Smell-Options.md), plus:
+[Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 | Option       | Value   | Effect  |
 | -------------|---------|---------|

@@ -1,6 +1,6 @@
 ## Introduction
 
-_Too Many Instance Variables_ is a case of [Large Class](Large-Class.md).
+_Too Many Instance Variables_ is a case of [Large Class](https://github.com/troessner/reek/blob/v6.6.0/docs/Large-Class.md).
 
 ## Example
 
@@ -36,7 +36,7 @@ Reek only counts the instance variables you use explicitly like in the example a
 
 ## Configuration
 
-Reek's _Too Many Instance Variables_ detector offers the [Basic Smell Options](Basic-Smell-Options.md), plus:
+Reek's _Too Many Instance Variables_ detector offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 | Option                   | Value   | Effect  |
 | -------------------------|---------|---------|

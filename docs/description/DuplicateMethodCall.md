@@ -161,7 +161,7 @@ end
 
 ## Configuration
 
-Reek's Duplicate Method Call detector currently offers the [Basic Smell Options](Basic-Smell-Options.md), plus:
+Reek's Duplicate Method Call detector currently offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 Option | Value | Effect
 -------|-------|-------

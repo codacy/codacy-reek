@@ -51,7 +51,7 @@ would not smell of NestedIterators (given a maximum allowed nesting of 1) since 
 
 ## Configuration
 
-_Nested Iterators_ offers the [Basic Smell Options](Basic-Smell-Options.md), plus:
+_Nested Iterators_ offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 | Option                | Value   | Effect  |
 | ----------------------|---------|---------|

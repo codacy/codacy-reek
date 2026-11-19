@@ -62,7 +62,7 @@ method `foo` of the `Dangerous` module.
 
 ## Configuration
 
-_Missing Safe Method_ offers the [Basic Smell Options](Basic-Smell-Options.md).
+_Missing Safe Method_ offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).
 
 ## Example configuration via source comment
 

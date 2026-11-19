@@ -59,4 +59,4 @@ Reek warns about module initialize when an instance method named `initialize` is
 
 ## Configuration
 
-Module Initialize supports the [Basic Smell Options](Basic-Smell-Options.md).
+Module Initialize supports the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).

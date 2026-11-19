@@ -44,4 +44,4 @@ created through `Struct.new` and `Class.new` and directly assigned to a constant
 
 ## Configuration
 
-_Irresponsible Module_ supports only the [Basic Smell Options](Basic-Smell-Options.md).
+_Irresponsible Module_ supports only the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).

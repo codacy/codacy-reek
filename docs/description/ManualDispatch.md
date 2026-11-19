@@ -1,6 +1,6 @@
 ## Introduction
 
-Reek reports a _Manual Dispatch_ smell if it finds source code that manually checks whether an object responds to a method before that method is called. Manual dispatch is a type of [Simulated Polymorphism](Simulated-Polymorphism.md) which leads to code that is harder to reason about, debug, and refactor.
+Reek reports a _Manual Dispatch_ smell if it finds source code that manually checks whether an object responds to a method before that method is called. Manual dispatch is a type of [Simulated Polymorphism](https://github.com/troessner/reek/blob/v6.6.0/docs/Simulated-Polymorphism.md) which leads to code that is harder to reason about, debug, and refactor.
 
 ## Example
 
@@ -27,4 +27,4 @@ test.rb -- 1 warning:
 
 ## Configuration
 
-_Manual Dispatch_ offers the [Basic Smell Options](Basic-Smell-Options.md).
+_Manual Dispatch_ offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).

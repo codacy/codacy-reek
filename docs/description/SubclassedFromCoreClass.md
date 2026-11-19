@@ -76,4 +76,4 @@ puts l.reverse.class  # => List
 
 ## Configuration
 
-_Subclassed From Core Class_ offers the [Basic Smell Options](Basic-Smell-Options.md).
+_Subclassed From Core Class_ offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).

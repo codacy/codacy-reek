@@ -2,7 +2,7 @@
 
 ## Introduction
 
-_Boolean Parameter_ is a case of [Control Couple](Control-Couple.md), where a
+_Boolean Parameter_ is a case of [Control Couple](https://github.com/troessner/reek/blob/v6.6.0/docs/Control-Couple.md), where a
 method parameter is defaulted to true or false. A _Boolean Parameter_
 effectively permits a method's caller to decide which execution path to take.
 This is a case of bad cohesion. You're creating a dependency between methods
@@ -51,4 +51,4 @@ Reek can only detect a _Boolean Parameter_ when it has a default initializer lik
 
 ## Configuration
 
-_Boolean Parameter_ supports the [Basic Smell Options](Basic-Smell-Options.md).
+_Boolean Parameter_ supports the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).

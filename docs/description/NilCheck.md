@@ -7,7 +7,7 @@ A _Nil Check_ is a type check. Failures of _Nil Check_ violate the
 Additionally to that, type checks often mask bigger problems in your source
 code like not using OOP and / or polymorphism when you should.
 
-The _Nil Check_ code smell is a case of [Simulated Polymorphism](Simulated-Polymorphism.md).
+The _Nil Check_ code smell is a case of [Simulated Polymorphism](https://github.com/troessner/reek/blob/v6.6.0/docs/Simulated-Polymorphism.md).
 
 ## Example
 
@@ -44,4 +44,4 @@ _Nil Check_ allows use of
 
 ## Configuration
 
-_Nil Check_ offers the [Basic Smell Options](Basic-Smell-Options.md).
+_Nil Check_ offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).
