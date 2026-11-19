@@ -33,9 +33,10 @@ bundle install
 ./scripts/doc_generate.sh <docs_location>
 ```
 
-Notes on the documentation generation:
-- You need to *require* the plugin, so they are injected on the *registry* when fetching the available Cops
-- After the `bundle install` the documentation generator will fetch examples from the Cops of the added plugins
+Notes on the documentation generation (`doc_generation/reek/generator.rb`):
+- Smell detectors and their default parameters come from the installed `reek` gem (`Reek::DetectorRepository`), and `version` in `docs/patterns.json` is set to the gem version.
+- Each `docs/description/<Smell>.md` is downloaded from the Reek GitHub repository at tag `v<version>` (falling back to `master`). If the download fails, the existing file is kept.
+- Values already in `docs/` (level, category, enabled, titles, descriptions, parameter descriptions) are kept. New smells get defaults (`Warning` / `CodeStyle`, enabled per Reek's default config), so review them by hand.
 
 ## Agent Playbook: Updating This Repository End-to-End
 
@@ -45,9 +46,7 @@ This section is written for an AI coding agent (or a human) tasked with updating
 
 This is a **Codacy engine**: a thin Scala wrapper (`src/main/scala/codacy/Engine.scala` and `src/main/scala/codacy/reek/Reek.scala`, built on `codacy-engine-scala-seed`) that shells out to the Ruby gem **Reek** (a static code smell detector for Ruby) and packages the result as a Docker image Codacy's platform can run against a customer's source code. The wrapper itself does not implement any analysis logic — it builds a `reek` CLI command, runs it via `CommandRunner`, and parses the output.
 
-Unlike some other Codacy tool-engines, **there is no `DocGenerator` script and no automated pattern-documentation pipeline in this repo.** `docs/patterns.json` and `docs/description/*` exist (so this *is* a rule-based Codacy "pattern" engine), but there is no Scala object, Rake task, or shell script anywhere in the git history that regenerates them from Reek's source. The one prior "bump-shaped" commit in this repo's history (`da5f377`, "Update rules configuration (#4)") hand-edited `docs/patterns.json` directly. Treat `docs/patterns.json` and `docs/description/*.md`/`description.json` as **hand-maintained files that must be kept in sync manually** against Reek's actual smell/rule set for the target version — there is no generator to run.
-
-Note: the README's older "Update Version with Docs" section above (`bundle update` / `./scripts/doc_generate.sh <docs_location>`) references a `scripts/` directory and generator script that do **not exist** in this repository (verified via `git log --all` and a full file listing) — do not rely on it; follow this playbook instead.
+`docs/patterns.json` and `docs/description/*` are regenerated with `./scripts/doc_generate.sh .` (see "Update Version with Docs" above). The generator keeps hand-tuned levels, categories and descriptions, adds new smells and removes ones that no longer exist, so review the resulting diff.
 
 - `docs/patterns.json` — the list of Reek smell detectors ("patterns") Codacy knows about, their parameters/defaults, and which are enabled out of the box. Hand-maintained; includes a top-level `"version"` field that should track the pinned Reek gem version.
 - `docs/description/description.json` + `docs/description/*.md` — human-readable titles/descriptions per pattern, used in the Codacy UI. Hand-maintained.
@@ -71,7 +70,7 @@ Note: the README's older "Update Version with Docs" section above (`bundle updat
 ### 3. Step-by-step update procedure
 
 1. **Bump the Reek version.** Run `bundle update reek` (requires Ruby + Bundler locally) to regenerate `Gemfile.lock` with the new version and its transitive dependency versions. Do not hand-edit the lockfile's hashes/versions unless bundler is unavailable.
-2. **Reconcile `docs/patterns.json` and `docs/description/*`** against Reek's real smell-detector set for the new version — update the `"version"` field, add/remove/rename patterns and their descriptions as needed. There is no generator to lean on here; this is a manual diff against Reek's own docs/changelog/source.
+2. **Reconcile `docs/patterns.json` and `docs/description/*`** against Reek's real smell-detector set for the new version — update the `"version"` field, add/remove/rename patterns and their descriptions as needed. Run `./scripts/doc_generate.sh .`, then review the diff and adjust level/category/description for any new smell by hand.
 3. **Build and format the Scala wrapper:** `sbt "scalafmtCheckAll; test:scalafmt; scalafmt; universal:stage"` (this mirrors the CI `publish_docker_local` job).
 4. **Build the Docker image:** `docker build -t codacy-reek .`
 5. **Run `codacy-plugins-test` locally** before pushing — clone https://github.com/codacy/codacy-plugins-test and run its "multiple" DockerTest command against your local image tag (this repo only uses the multiple-tests fixtures, not single pattern/json tests).

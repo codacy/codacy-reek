@@ -3,7 +3,7 @@
 ## Introduction
 
 A _Long Yield List_ occurs when a method yields a lot of arguments to the block
-it gets passed. It is a special case of [Long Parameter List](LongParameterList).
+it gets passed. It is a special case of [Long Parameter List](Long-Parameter-List.md).
 
 ## Example
 

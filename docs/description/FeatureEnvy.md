@@ -86,7 +86,7 @@ end
 
 ## Differences to _Utility Function_
 
-_Feature Envy_ is only triggered if there are some references to self and _[Utility Function](UtilityFunction)_ is triggered if there are no references to self.
+_Feature Envy_ is only triggered if there are some references to self and _[Utility Function](Utility-Function.md)_ is triggered if there are no references to self.
 
 ## Configuration
 

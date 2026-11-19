@@ -136,6 +136,10 @@
       {
         "name": "max_params",
         "description": "The maximum number of parameters allowed in a method or block before a warning is issued. Defaults to 3."
+      },
+      {
+        "name": "overrides",
+        "description": "overrides"
       }
     ]
   },
@@ -326,6 +330,10 @@
         "description": "Ignores any context whose full description matches any element of this array."
       },
       {
+        "name": "reject",
+        "description": "reject"
+      },
+      {
         "name": "accept",
         "description": "The set of names that Reek will accept (and not report) even if they match one of the reject expressions."
       }
@@ -340,6 +348,10 @@
       {
         "name": "exclude",
         "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "reject",
+        "description": "reject"
       },
       {
         "name": "accept",
@@ -358,6 +370,10 @@
         "description": "Ignores any context whose full description matches any element of this array."
       },
       {
+        "name": "reject",
+        "description": "reject"
+      },
+      {
         "name": "accept",
         "description": "The set of names that Reek will accept (and not report) even if they match one of the reject expressions."
       }
@@ -372,6 +388,10 @@
       {
         "name": "exclude",
         "description": "Ignores any context whose full description matches any element of this array."
+      },
+      {
+        "name": "reject",
+        "description": "reject"
       },
       {
         "name": "accept",
@@ -419,5 +439,4 @@
       }
     ]
   }
-
 ]
