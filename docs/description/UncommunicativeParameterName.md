@@ -4,7 +4,7 @@
 
 An _Uncommunicative Parameter Name_ is a parameter name that doesn't
 communicate its intent well enough. This code smell is a case of
-[Uncommunicative Name](Uncommunicative-Name.md).
+[Uncommunicative Name](https://github.com/troessner/reek/blob/v6.6.0/docs/Uncommunicative-Name.md).
 
 ## Current Support in Reek
 
@@ -16,7 +16,7 @@ _Uncommunicative Parameter Name_ checks for:
 
 ## Configuration
 
-Reek's _Uncommunicative Parameter Name_ detector supports the [Basic Smell Options](Basic-Smell-Options.md), plus:
+Reek's _Uncommunicative Parameter Name_ detector supports the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 | Option   | Value       | Effect  |
 | ---------|-------------|---------|

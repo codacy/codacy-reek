@@ -1,6 +1,6 @@
 ## Introduction
 
-_Too Many Methods_ is a case of [Large Class](Large-Class.md).
+_Too Many Methods_ is a case of [Large Class](https://github.com/troessner/reek/blob/v6.6.0/docs/Large-Class.md).
 
 ## Example
 
@@ -49,7 +49,7 @@ would cause Reek to emit the same warning as in the example above.
 
 ## Configuration
 
-Reek's _Too Many Methods_ detector offers the [Basic Smell Options](Basic-Smell-Options.md), plus:
+Reek's _Too Many Methods_ detector offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 | Option        | Value   | Effect  |
 | --------------|---------|---------|

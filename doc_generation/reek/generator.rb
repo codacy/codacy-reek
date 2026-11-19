@@ -107,9 +107,9 @@ module ReekDoc
 
     def write_markdown(smell_type)
       path    = File.join(@description_dir, "#{smell_type}.md")
-      content = fetch_markdown(smell_type)
+      content, ref = fetch_markdown(smell_type)
       if content
-        File.write(path, content)
+        File.write(path, absolutize_links(content, ref))
       elsif File.exist?(path)
         warn "Could not download docs for #{smell_type}; keeping existing #{path}"
       else
@@ -127,11 +127,18 @@ module ReekDoc
       ["v#{@version}", 'master'].each do |ref|
         uri = URI("https://raw.githubusercontent.com/troessner/reek/#{ref}/docs/#{doc_file_name(smell_type)}.md")
         response = Net::HTTP.get_response(uri)
-        return response.body if response.is_a?(Net::HTTPSuccess)
+        return [response.body, ref] if response.is_a?(Net::HTTPSuccess)
       rescue StandardError => e
         warn "Error fetching #{uri}: #{e.message}"
       end
       nil
+    end
+
+    # Upstream docs link to siblings relatively, e.g. [Basic Smell Options](Basic-Smell-Options.md).
+    # Those targets don't exist locally (and some aren't smells at all), so point them at GitHub.
+    def absolutize_links(content, ref)
+      base = "https://github.com/troessner/reek/blob/#{ref}/docs/"
+      content.gsub(%r{\]\((?!https?://|#|/|mailto:)([^)\s]+)\)}) { "](#{base}#{Regexp.last_match(1)})" }
     end
 
     def load_existing_patterns

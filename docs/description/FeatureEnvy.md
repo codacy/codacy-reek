@@ -86,8 +86,8 @@ end
 
 ## Differences to _Utility Function_
 
-_Feature Envy_ is only triggered if there are some references to self and _[Utility Function](Utility-Function.md)_ is triggered if there are no references to self.
+_Feature Envy_ is only triggered if there are some references to self and _[Utility Function](https://github.com/troessner/reek/blob/v6.6.0/docs/Utility-Function.md)_ is triggered if there are no references to self.
 
 ## Configuration
 
-_Feature Envy_ supports the [Basic Smell Options](Basic-Smell-Options.md).
+_Feature Envy_ supports the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).

@@ -1,6 +1,6 @@
 ## Introduction
 
-_Too Many Constants_ is a case of [Large Class](Large-Class.md).
+_Too Many Constants_ is a case of [Large Class](https://github.com/troessner/reek/blob/v6.6.0/docs/Large-Class.md).
 
 ## Example
 
@@ -30,7 +30,7 @@ test.rb -- 1 warning:
 ```
 ## Configuration
 
-Reek's _Too Many Constants_ detector offers the [Basic Smell Options](Basic-Smell-Options.md), plus:
+Reek's _Too Many Constants_ detector offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 | Option                   | Value   | Effect  |
 | -------------------------|---------|---------|

@@ -2,7 +2,7 @@
 
 ## Introduction
 
-_Control Parameter_ is a case of [Control Couple](Control-Couple.md).
+_Control Parameter_ is a case of [Control Couple](https://github.com/troessner/reek/blob/v6.6.0/docs/Control-Couple.md).
 
 ## Example
 
@@ -29,4 +29,4 @@ the tested value in a conditional statement.
 
 ## Configuration
 
-_Control Parameter_ supports the [Basic Smell Options](Basic-Smell-Options.md).
+_Control Parameter_ supports the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).

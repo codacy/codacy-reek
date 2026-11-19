@@ -37,4 +37,4 @@ end
 
 ##  Configuration
 
-_Class Variable_ supports the [Basic Smell Options](Basic-Smell-Options.md).
+_Class Variable_ supports the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).

@@ -160,4 +160,4 @@ directories:
 
 ## Configuration
 
-_Instance Variable Assumption_ supports the [Basic Smell Options](Basic-Smell-Options.md).
+_Instance Variable Assumption_ supports the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).

@@ -37,7 +37,7 @@ Reek looks for a group of two or more parameters with the same names that are ex
 
 ## Configuration
 
-Reek's _Data Clump_ detector offers the [Basic Smell Options](Basic-Smell-Options.md), plus:
+Reek's _Data Clump_ detector offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 | Option           | Value       | Effect  |
 | -----------------|-------------|---------|

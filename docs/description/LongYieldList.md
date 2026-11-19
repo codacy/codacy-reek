@@ -3,7 +3,7 @@
 ## Introduction
 
 A _Long Yield List_ occurs when a method yields a lot of arguments to the block
-it gets passed. It is a special case of [Long Parameter List](Long-Parameter-List.md).
+it gets passed. It is a special case of [Long Parameter List](https://github.com/troessner/reek/blob/v6.6.0/docs/Long-Parameter-List.md).
 
 ## Example
 
@@ -30,7 +30,7 @@ Currently _Long Yield List_ reports any method or block with more than 3 paramet
 
 ## Configuration
 
-Reek's _Long Yield List_ detector supports the [Basic Smell Options](Basic-Smell-Options.md), plus:
+Reek's _Long Yield List_ detector supports the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md), plus:
 
 | Option       | Value   | Effect  |
 | -------------|---------|---------|

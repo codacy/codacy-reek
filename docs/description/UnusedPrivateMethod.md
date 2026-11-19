@@ -28,12 +28,12 @@ Reek would emit the following warning:
 
 ## Configuration
 
-_Unused Private Method_ offers the [Basic Smell Options](Basic-Smell-Options.md).
+_Unused Private Method_ offers the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md).
 
 Private methods that are called via dynamic dispatch
 will trigger a false alarm since detecting something like this is far out of
 scope for Reek. In this case you can disable this detector via the `exclude`
-configuration option (which is part of the [Basic Smell Options](Basic-Smell-Options.md))
+configuration option (which is part of the [Basic Smell Options](https://github.com/troessner/reek/blob/v6.6.0/docs/Basic-Smell-Options.md))
 for instance like this (an example from Reek's own codebase):
 
 ```ruby
